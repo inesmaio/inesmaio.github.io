@@ -1,0 +1,61 @@
+@import "utils";
+@import "grid";
+
+.header {
+  justify-content: center;
+  background-image: url(/mobile-header.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center;
+  border-bottom: 5px solid $lines-color;
+  height: 100vh;
+  & .header-content {
+    justify-content: center;
+    align-content: center;
+  }
+    & .icons {
+      justify-content: center;
+      align-self: flex-end;
+      margin-bottom: 30px;
+      & img {
+        box-shadow: 1px 1px 2px $font-color;
+        border-radius: 10%;
+        padding: 0;
+        margin: 15px;
+        width: 50px;
+      }
+    }
+}
+
+@media (min-width: 768px) {
+  .header {
+    #icons-content {
+      justify-content: space-evenly;
+       & img {
+        width: 70px;
+       }
+     }
+    }
+  }
+@media (min-width: 1024px) {
+  .header {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-end;
+    background-image: url(/header-banner-shorter.jpg);
+    background-size: cover;
+    background-position: inherit;
+    height: 100vh;
+    width: 100%;
+      & #icons-content {
+        justify-content: center;
+        margin: 0;
+      }
+     & h1 {
+      text-align: center;
+      font-size: 150px;
+      align-content: center;
+     }
+  }
+}
