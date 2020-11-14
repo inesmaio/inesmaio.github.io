@@ -5,6 +5,7 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
+      - name: Build
       - uses: actions/checkout@v2
       - uses: borales/actions-yarn@v2.0.0
         with:
@@ -12,7 +13,11 @@ jobs:
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: build # will run `yarn build` command
-      - uses: crazy-max/ghaction-github-pages@v2.2.0
+          
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          build_dir: out/
-          jekyll: false
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: out # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
