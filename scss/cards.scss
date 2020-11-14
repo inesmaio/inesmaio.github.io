@@ -1,19 +1,12 @@
 @import "utils";
 
-.image{
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 .cards-container{
     flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    justify-content: center;
+    // flex-wrap: nowrap;
+    // overflow-x: auto;
+    // scroll-snap-type: x mandatory;
     transition: background-color 1s ease;
     &:hover{
         background-color: $animi-color;
