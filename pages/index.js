@@ -12,13 +12,13 @@ const Index = () => {
     return (
         <section>
             <Header />
-            <Banner img_src="/aboutme-banner.jpg" title="About Me" />
+            <Banner img_src="/aboutme-banner-low.jpg" title="About Me" />
             <AboutMe />
-            <Banner img_src="/education-banner.jpg" title="Education" />
+            <Banner img_src="/education-banner-low.jpg" title="Education" />
             <section className="cards-container gridrow">
                 <Cards data={education} />
             </section>
-            <Banner img_src="/exp.jpg" title="Experience" />
+            <Banner img_src="/exp-low.jpg" title="Experience" />
             <section className="cards-container gridrow">
                 <Cards data={experience} />
             </section>
