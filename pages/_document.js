@@ -11,7 +11,7 @@ class MyDocument extends Document {
             <Html>
                 <Head>
                     <title>Ines Maio</title>
-                    <link rel="icon" href="/mobile-header.jpg" sizes="16x16" type="image/png"></link>
+                    <link rel="icon" href="/favicon.png" sizes="16x16" type="image/png"></link>
                 </Head>
                 <body>
                     <Main />
