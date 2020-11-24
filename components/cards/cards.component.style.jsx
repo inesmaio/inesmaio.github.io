@@ -14,8 +14,8 @@ export const CardsContainer = styled.section`
 `
 
 export const FlipCard = styled.div`
-    height: 450px;
-    width: 350px;
+    height: 350px;
+    width: 250px;
     background-color: transparent;
     flex-direction: row;
     margin: 50px;
@@ -24,11 +24,13 @@ export const FlipCard = styled.div`
     flex: 0 0 auto;
     @media (min-width: 1024px){
         perspective: 1000px;
+        height: 450px;
+        width: 350px;
         }
     }
 `
 
-export const Titles = styled.h2`
+export const Titles = styled.div`
     padding: 10px;
     align-items: center;
     flex-direction: column;
@@ -40,7 +42,9 @@ export const Logo = styled.div`
     display: flex;
     padding: 10px;
     & img{
-        height: auto;
+        height: 80%;
+        width: 80%;
+    }
     }
 `
 

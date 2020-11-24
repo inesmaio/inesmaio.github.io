@@ -1,34 +1,39 @@
 import styled from "styled-components"
 
 export const AboutMe = styled.section`
-    height: 55vh;
-    line-height: 40px;
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     border-bottom: 5px solid ${(props) => props.theme.colors.salmon};
     border-top: 5px solid ${(props) => props.theme.colors.salmon};
-    & img {
-        width: 40px;
-        padding: 5px;
-    }
     & p, div {
         margin: 20px 0;
         & section {
             margin-bottom: 20px;
         }
     }
-}
-@media (min-width: 1024px) {
-    & p {
-    margin: 40px;
-}
+    @media (min-width: 768px) {
+        flex-direction: row;
+        & img {
+            width: 30px;
+        }
+        & p {
+        margin: 40px;
+    }
 }
 `
 export const Description = styled.section`
-    margin: 20px 0;
-    width: 35vw;
+    line-height: 30px;
+    margin: 20px;
+    width: 80%;
+    font-size: ${(props) => props.theme.fontSizes.pM};
+    @media (min-width: 768px){
+        line-height: 40px;
+        width: 50%;
+        font-size: ${(props) => props.theme.fontSizes.p};
+    }
 `
 
 export const ContentCenter = styled.div`
@@ -42,5 +47,13 @@ export const PetsIcons = styled.section`
         display: flex;
         justify-content: center;
         flex-direction: column;
+    }
+    & img {
+        width: 40px;
+        margin: 8px;
+        @media (min-width: 768px) {
+            width: 50px;
+            margin: 8px;
+        }
     }
 `

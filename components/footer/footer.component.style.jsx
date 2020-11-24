@@ -6,10 +6,13 @@ export const FooterContainer = styled.footer`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 300px;
+    height: auto;
     padding-bottom: 60px;
     background-color: ${(props) => props.theme.colors.lightGreenSec};
     border-top: 5px solid ${(props) => props.theme.colors.salmon};
+    @media (min-width: 768px) {
+        heigth: 300px;
+    }
 `
 
 export const Creator = styled.section`
@@ -20,6 +23,12 @@ export const Heart = styled.img`
     width: 40px;
     margin: 10px;
     color: ${(props) => props.theme.colors.blue};
+`
+export const Content = styled.p`
+    font-size: ${(props) => props.theme.fontSizes.smallM};
+    @media (min-width: 768px) {
+        font-size: ${(props) => props.theme.fontSizes.small};
+    }
 `
 
 export const Icons = styled.div`
@@ -44,10 +53,11 @@ export const Icons = styled.div`
         box-shadow: 1px 1px 2px ${(props) => props.theme.colors.blue};
         border-radius: 10%;
         padding: 0;
-        margin: 15px;
-        width: 50px;
+        margin: 8px;
+        width: 30px;
         @media (min-width: 768px) {
             width: 50px;
+            margin: 15;
         }
       }
 `

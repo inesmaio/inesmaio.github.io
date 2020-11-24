@@ -27,10 +27,11 @@ export const HeaderContent = styled.div`
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    height: 50vh;
-    width: 60vw;
+    width: 100vw;
     @media (min-width: 1024px) {
         padding: 60px;
+        height: 50vh;
+        width: 60vw;
     }
 `
 
@@ -38,15 +39,14 @@ export const Icons = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    flex-wrap: wrap;
     margin-bottom: 30px;
     @media (min-width: 768px) {
-        justify-content: space-evenly;
         & img {
             width: 70px;
            }
     }
     @media (min-width: 1024px) {
-        justify-content: center;
         margin: 0 30px 90px;
             padding: 40px;
         margin: 0;
@@ -60,10 +60,11 @@ export const Icons = styled.div`
         box-shadow: 1px 1px 2px ${(props) => props.theme.colors.blue};
         border-radius: 10%;
         padding: 0;
-        margin: 15px;
-        width: 50px;
+        margin: 8px;
+        width: 30px;
         @media (min-width: 768px) {
-            width: 70px;
+            width: 50px;
+            margin: 15;
         }
       }
 `

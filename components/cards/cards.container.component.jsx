@@ -7,7 +7,7 @@ class Cards extends React.Component {
         return (
             <CardsContainer>
             {this.props.data.map(card => (
-                <Card title={card.title} date={card.date} img_src={`${card.institution}`} description={card.description}/>
+                <Card key={card.description} title={card.title} date={card.date} company={card.company} img_src={`${card.institution}`} description={card.description}/>
             ))}
             </CardsContainer>
 

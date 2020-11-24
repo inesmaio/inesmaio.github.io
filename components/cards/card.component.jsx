@@ -11,6 +11,7 @@ class Card extends React.Component {
                         <Titles>
                             <h2>{this.props.title}</h2>
                             <h3>{this.props.date}</h3>
+                            <h2>{this.props.company}</h2>
                         </Titles>
                         <Logo>
                             <img src= {this.props.img_src} width="100px" height="150px" className="card_img col-m4 col-t8 col12"/> 
@@ -20,6 +21,7 @@ class Card extends React.Component {
                         <Titles>
                             <h2>{this.props.title}</h2>
                             <h3>{this.props.date}</h3>
+                            <h2>{this.props.company}</h2>
                         </Titles>
                         <div>
                             <Description>{this.props.description}</Description> 

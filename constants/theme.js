@@ -25,8 +25,8 @@ const theme = {
         pT: "21px",
         pM: "18px",
         pCard: "20px",
-        small: "15px",
-        smallM: "13px",
+        small: "25px",
+        smallM: "18px",
     },
     fontFamily: {
         title: "AmaticSC",
