@@ -27,7 +27,7 @@ export const experience = [
         title: "Associate Web Developer",
         date: "May 2018 - May 2019",
         institution: "/atb.png",
-        description: " Web based application development, maintenance and creation of the webs sites"
+        description: " Web based application development, maintenance and web sites development"
     },
     {
         title: "Project Manager Consultant",
