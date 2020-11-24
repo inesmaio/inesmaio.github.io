@@ -1,10 +1,10 @@
-import "../scss/banner.scss";
+import React from "react";
+import { BannerContainer, Title } from "./banner.component.style"
 
-
-class Banner extends React.Component { 
-    render () {
+class Banner extends React.Component {
+    render() {
         return (
-            <section className="banner gridrow"
+            <BannerContainer
                 style={{
                     backgroundImage: `url(${this.props.img_src})`,
                     backgroundSize: "cover",
@@ -13,7 +13,7 @@ class Banner extends React.Component {
                 }}>
                 <h1>{this.props.title}</h1>
 
-            </section>
+            </BannerContainer>
         )
     }
 }

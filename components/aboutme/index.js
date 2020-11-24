@@ -1,0 +1,1 @@
+export { default as AboutMeSec } from "./abouteme.component"
