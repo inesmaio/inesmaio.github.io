@@ -14,7 +14,7 @@ class Card extends React.Component {
                             <h2>{this.props.company}</h2>
                         </Titles>
                         <Logo>
-                            <img src= {this.props.img_src} width="100px" height="150px" className="card_img col-m4 col-t8 col12"/> 
+                            <a href={this.props.url}><img src= {this.props.img_src} width="100px" height="150px" className="card_img col-m4 col-t8 col12"/> </a>
                         </Logo>
                     </Front>     
                     <Back>

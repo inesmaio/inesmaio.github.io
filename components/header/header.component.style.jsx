@@ -7,7 +7,6 @@ export const HeaderStyle = styled.section`
     align-items: center;
     background-image: url(/mobile-header.jpg);
     background-attachment: fixed;
-    background-repeat: no-repeat;
     background-size: cover; 
     background-position: center;
     border-bottom: 5px solid ${(props) => props.theme.colors.salmon};
@@ -17,8 +16,7 @@ export const HeaderStyle = styled.section`
         align-items: flex-end;
         flex-direction: column;
         background-image: url(/header-banner-shorter.jpg);
-        background-size: cover;
-        background-position: inherit;
+        background-position: fixed;
     }
 `
 
@@ -47,8 +45,7 @@ export const Icons = styled.div`
            }
     }
     @media (min-width: 1024px) {
-        margin: 0 30px 90px;
-            padding: 40px;
+        padding: 40px;
         margin: 0;
     }
     & a {
