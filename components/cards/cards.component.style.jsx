@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 
 
 export const CardsContainer = styled.section`
@@ -103,15 +103,19 @@ export const Description = styled.div`
 `
 
 export const Inner = styled.div`
-    @media (min-width: 1024px){
         width: 100%;
         height: 100%;
         justify-content: space-around;
         transition: transform 2s;
         transform-style: preserve-3d;
         perspective: 1000px;
-        &:hover{
-            transform: rotateY(180deg);
-        }
-    }
+  `
+  export const Flip = styled.div`
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+        transition: transform 2s;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        transform: rotateY(180deg);
   `

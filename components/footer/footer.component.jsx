@@ -13,7 +13,7 @@ const Footer = () => {
                 <a href="https://twitter.com/inesmaio" target="_blank"><img src="/icons/twitter.svg" /></a>
                 <a href="https://github.com/inesmaio/" target="_blank"><img src="/icons/github.svg" /></a>
                 <a href="https://www.linkedin.com/in/inesmaio/" target="_blank"><img src="/icons/linkedin.svg" /></a>
-                <a href="/cv.pdf" download><img src="/icons/cv.png" /></a>
+                <a href="/InesMaioResume.pdf" download><img src="/icons/cv.png" /></a>
             </Icons>
             <Content>icons and images designed by Freepik</Content>
         </FooterContainer>
