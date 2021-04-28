@@ -1,1 +1,1 @@
-export { default as AboutMeSec } from "./abouteme.component"
+export { default as AboutMeSec } from "./aboutme.component"

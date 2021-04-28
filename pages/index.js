@@ -1,4 +1,3 @@
-
 import { AboutMeSec, Header, Banner, Cards, Footer } from "../components";
 import { experience, education } from "../public/data";
 import { createGlobalStyle } from "styled-components";
