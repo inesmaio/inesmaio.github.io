@@ -11,25 +11,24 @@ export const CardsContainer = styled.section`
 `
 
 export const FlipCard = styled.div`
-    height: 400px;
+    height: 330px;
     width: 250px;
     background-color: transparent;
     flex-direction: row;
     margin: 50px;
-    transition: transform 1s;
     flex: 0 0 auto;
-    :hover {
-        transform: scale(1.05)
-    }
+    perspective: 1000px;
     @media (min-width: 768px){
         perspective: 1000px;
-        height: 450px;
-        width: 350px;
     }
     @media (min-width: 1024px){
         perspective: 1000px;
         height: 500px;
         width: 350px;
+        transition: transform 1s;
+        :hover {
+            transform: scale(1.05)
+        }
     }
 `
 
@@ -56,7 +55,7 @@ export const Logo = styled.div`
     
 `
 
-export const Front = styled.div`
+export const Front = styled.a`
     height: 100%;
     width: 100%; 
     display: flex;
@@ -67,9 +66,9 @@ export const Front = styled.div`
     background-color: ${(props) => props.theme.colors.lightGreen};
     border: 1px solid ${(props) => props.theme.colors.salmon};
     justify-content: space-around;
-    @media (min-width: 1024px){
-        backface-visibility: hidden;
-    }
+    text-decoration: none;
+    perspective: 1000px;
+ 
 `
 
 export const Back = styled.div`
@@ -161,8 +160,8 @@ export const PortCard = styled.div`
 `
 
 export const PortCardContainer = styled.a`
-    width: 349px;
-    height: 220px;
+    width: 258px;
+    height: 163px;
     margin: 50px;
     position:relative;
     top:0px;
@@ -179,5 +178,9 @@ export const PortCardContainer = styled.a`
     }
     &:hover ${PortCard} {
         opacity: 0;
+    }
+    @media (min-width: 768px){
+        width: 349px;
+        height: 220px;
     }
 `;

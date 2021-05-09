@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const AboutMe = styled.section`
-    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;

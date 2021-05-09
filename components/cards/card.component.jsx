@@ -4,18 +4,16 @@ class Card extends React.Component {
     render() {
         return (
             <FlipCard>
-                <a href={this.props.url} target="_blank">
-                    <Front>
-                        <Titles>
-                            <h2>{this.props.title}</h2>
-                            <h3>{this.props.date}</h3>
-                            <h2>{this.props.company}</h2>
-                        </Titles>
-                        <Logo>
-                             <img className= {this.props.cat ? "portfolio" : ""} src={this.props.img_src} />
-                        </Logo>
-                    </Front>
-                </a>
+                <Front href={this.props.url} target="_blank">
+                    <Titles>
+                        <h2>{this.props.title}</h2>
+                        <h3>{this.props.date}</h3>
+                        <h2>{this.props.company}</h2>
+                    </Titles>
+                    <Logo>
+                        <img className={this.props.cat ? "portfolio" : ""} src={this.props.img_src} />
+                    </Logo>
+                </Front>
                 {/* <Back>
                     <Titles>
                         <h2>{this.props.title}</h2>
