@@ -54,7 +54,7 @@ export const education = [
         date: "March 2019 - September 2019",
         institution: "/freecodecamp.png",
         description: "Basic JavaScript, Basic Data Structures, Debugging, Object Oriented Programming, Intermediate Algorithm Scripting",
-        url:"https://www.freecodecamp.org/"
+        url:"https://www.freecodecamp.org/certification/imaio/javascript-algorithms-and-data-structures"
     },
     {
         title: "Web Development",
@@ -76,5 +76,36 @@ export const education = [
         institution: "/eseig.png",
         description: "Information and Communication Technologies; Analysis and Systems Modeling; Databases; Statistical Information; Computer Applications; Quality Management.",
         url:"https://www.ese.ipp.pt/cursos/escolas/eseig"
+    },
+]
+
+export const portfolio = [
+    {
+        title: "FreeWalking Tours - Licor Beirão",
+        date: "2019",
+        institution: "/licorbeirao.png",
+        description: "This is my final project of my Web Development training. I used JavaScript and SASS. This is not a complete APP. Feel free to have a look",
+        url:"https://freewalkingtours.herokuapp.com/"
+    },
+    {
+        title: "Bzinus",
+        date: "2020",
+        institution: "/bzinusSS.png",
+        description: "To build this app I used React, NextJS and Styled-Components.",
+        url:"https://bzinus.pt/"
+    },
+    {
+        title: "Countries App",
+        date: "2020",
+        institution: "/countries.png",
+        description: "To build this app I used React, NextJS and Styled-Components. The porpouse of this app was to learn a bit more about how to use React, improve my JavaScript skills, and learn how to use an API",
+        url:"https://search-countries.vercel.app/"
+    },
+    {
+        title: "My Blog",
+        date: "Work in Progress",
+        institution: "/myblog.png",
+        description: "Professional website.",
+        url:"https://inesmaio.github.io/wip"
     },
 ]

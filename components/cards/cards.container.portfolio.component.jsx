@@ -1,17 +1,15 @@
-import Card from "./card.component";
+import PortfolioCard from "./card.portfolio.component";
 import { CardsContainer } from "./cards.component.style"
 
 
-class Cards extends React.Component {
+class PortfolioCards extends React.Component {
     render() {
         return (
             <CardsContainer>
                 {this.props.data.map(card => (
-                    <Card 
-                    cat={card.cat}
+                    <PortfolioCard 
                     key={card.description} 
                     title={card.title}  
-                    date={card.date} company={card.company} 
                     img_src={`${card.institution}`} 
                     description={card.description} 
                     url={`${card.url}`} />
@@ -22,4 +20,4 @@ class Cards extends React.Component {
     }
 }
 
-export default Cards;
+export default PortfolioCards;

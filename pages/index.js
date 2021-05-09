@@ -1,7 +1,9 @@
-import { AboutMeSec, Header, Banner, Cards, Footer } from "../components";
-import { experience, education } from "../public/data";
+import React, { useEffect } from "react";
+import { AboutMeSec, Header, Banner, Cards, Footer, PortfolioCards } from "../components";
+import { experience, education, portfolio } from "../public/data";
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
+
 
 const GlobalStyle = createGlobalStyle`
 
@@ -75,23 +77,53 @@ const AppContainer = styled.div`
 `;
 
 const Index = () => {
+
+  const scroll = () => {
+    const element = document.getElementById("menuBar");
+    if (element && (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)) {
+      element.style.top = "0";
+      element.classList.remove("hide")
+      element.classList.add("drop")
+    } else if (element) {
+      element.style.top = "-150px";
+      element.classList.remove("drop")
+      element.classList.add("hide")
+
+    }
+  }
+
+  useEffect(() => {
+    addEventListener("scroll", scroll);
+
+    return () => {
+      removeEventListener("scroll", scroll);
+    }
+  }, [])
+
     return (
         <AppContainer>
           <GlobalStyle />
-            <Header />
+            <Header 
+              title= "Inês Maio" 
+              path="https://inesmaio.github.io/wip"
+              img="/icons/blog.png"
+            />
             <Banner img_src="/aboutme-banner-low.jpg" title="About Me" />
             <AboutMeSec />
+            <Banner img_src="/exp-low.jpg" title="Portfolio" />
+            <section>
+                <PortfolioCards data={portfolio} />
+            </section>
             <Banner img_src="/education-banner-low.jpg" title="Education" />
-            <section className="cards-container gridrow">
+            <section>
                 <Cards data={education} />
             </section>
             <Banner img_src="/exp-low.jpg" title="Experience" />
-            <section className="cards-container gridrow">
+            <section>
                 <Cards data={experience} />
             </section>
             <Footer />
         </AppContainer>
-
     )
 };
 

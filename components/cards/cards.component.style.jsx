@@ -6,11 +6,8 @@ export const CardsContainer = styled.section`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    transition: background-color 1s ease;
+    background-color: ${(props) => props.theme.colors.green};
     flex-flow: wrap;
-    &:hover{
-        background-color: ${(props) => props.theme.colors.green};
-    }
 `
 
 export const FlipCard = styled.div`
@@ -20,9 +17,10 @@ export const FlipCard = styled.div`
     flex-direction: row;
     margin: 50px;
     transition: transform 1s;
-    transform-style: preserve-3d;
     flex: 0 0 auto;
-    
+    :hover {
+        transform: scale(1.05)
+    }
     @media (min-width: 768px){
         perspective: 1000px;
         height: 450px;
@@ -52,6 +50,10 @@ export const Logo = styled.div`
         height: 100%;
         width: 100%;
     }
+    & .portfolio{
+        width: 300px;
+    }
+    
 `
 
 export const Front = styled.div`
@@ -119,3 +121,63 @@ export const Inner = styled.div`
         perspective: 1000px;
         transform: rotateY(180deg);
   `
+
+
+        
+  export const Content = styled.div`
+        box-sizing: border-box;
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: none;
+        border-radius: 30px;
+        border: 1px solid #C75959;
+        opacity: 0;
+        transition: 1s;
+        
+        & h3 {
+            color: ${(props) => props.theme.colors.blue};
+        }
+`
+
+export const PortCard = styled.div`
+        display: flex;
+        position:absolute;
+        top:0px;
+        left:0px;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        border: 1px solid #C75959;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 1;
+        transition: 1s;
+        background-image: ${props => props.backgroundImage};
+`
+
+export const PortCardContainer = styled.a`
+    width: 349px;
+    height: 220px;
+    margin: 50px;
+    position:relative;
+    top:0px;
+    left:0px;
+    border-radius: 30px;
+    box-shadow: 5px 2px 22px 0px grey;
+    background-color: ${(props) => props.theme.colors.lightGreen};
+    border: 1px solid ${(props) => props.theme.colors.salmon};
+    cursor: pointer;
+    text-decoration: none;
+    &:hover ${Content} {
+        opacity: 1;
+        background-color: ${(props) => props.theme.colors.lightGreen};
+    }
+    &:hover ${PortCard} {
+        opacity: 0;
+    }
+`;

@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
 export const AboutMe = styled.section`
-    width: 100%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     border-bottom: 5px solid ${(props) => props.theme.colors.salmon};
     border-top: 5px solid ${(props) => props.theme.colors.salmon};
     & p, div {
@@ -31,7 +31,7 @@ export const Description = styled.section`
     font-size: ${(props) => props.theme.fontSizes.pM};
     @media (min-width: 768px){
         line-height: 40px;
-        width: 50%;
+        width: 40%;
         font-size: ${(props) => props.theme.fontSizes.p};
     }
 `
