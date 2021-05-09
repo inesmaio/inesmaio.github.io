@@ -91,7 +91,7 @@ export const portfolio = [
         title: "Bzinus",
         date: "2020",
         institution: "/bzinusSS.png",
-        description: "To build this app I used React, NextJS and Styled-Components.",
+        description: "Professional website.",
         url:"https://bzinus.pt/"
     },
     {
@@ -105,7 +105,7 @@ export const portfolio = [
         title: "My Blog",
         date: "Work in Progress",
         institution: "/myblog.png",
-        description: "Professional website.",
+        description: "To build this app I used React, NextJS and Styled-Components.",
         url:"https://inesmaio.github.io/wip"
     },
 ]
