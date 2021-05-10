@@ -32,7 +32,7 @@ export const experience = [
         url:"https://www.noesis.pt/"
     },
     {
-        title: "Associate Web Developer",
+        title: "Technical Assistant",
         date: "May 2018 - May 2019",
         institution: "/atb.png",
         company: "ATB",
