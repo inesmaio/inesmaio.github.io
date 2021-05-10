@@ -45,7 +45,6 @@ export const Icons = styled.div`
            }
     }
     @media (min-width: 1024px) {
-        padding: 40px;
         margin: 0;
     }
     & a {

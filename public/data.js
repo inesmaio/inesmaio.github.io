@@ -21,7 +21,7 @@ export const experience = [
         institution: "/fabamaq.png",
         company: "Fabamaq",
         description: "Mexico country manager for development of Bingo games",
-        fabamaq:"https://www.fabamaq.com/"
+        url:"https://www.fabamaq.com/"
     },
     {
         title: "QA Consultant",
@@ -84,7 +84,7 @@ export const portfolio = [
         title: "FreeWalking Tours - Licor Beirão",
         date: "2019",
         institution: "/licorbeirao.png",
-        description: "This is my final project of my Web Development training. I used JavaScript and SASS. This is not a complete APP. Feel free to have a look",
+        description: "Final project of Web Development training. I used JavaScript and SASS. This is not a complete APP.",
         url:"https://freewalkingtours.herokuapp.com/"
     },
     {
@@ -98,14 +98,14 @@ export const portfolio = [
         title: "Countries App",
         date: "2020",
         institution: "/countries.png",
-        description: "To build this app I used React, NextJS and Styled-Components. The porpouse of this app was to learn a bit more about how to use React, improve my JavaScript skills, and learn how to use an API",
+        description: "To build this app I used React, NextJS and Styled-Components.",
         url:"https://search-countries.vercel.app/"
     },
     {
         title: "My Blog",
         date: "Work in Progress",
         institution: "/myblog.png",
-        description: "To build this app I used React, NextJS and Styled-Components.",
+        description: "Built with React, NextJS and Styled-Components.",
         url:"https://inesmaio.github.io/wip"
     },
 ]
