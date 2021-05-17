@@ -16,7 +16,7 @@ class Header extends React.Component {
                     <Description>{this.props.description}</Description>
                     <Icons>
                         <a href={this.props.path}><img src={this.props.img} /></a>
-                        <a href="/ines_maio_resume.pdf" download><img src="/icons/cv.svg" /></a>
+                        <a href="/ines_maio_resume.pdf" target='_blank'><img src="/icons/cv.svg" /></a>
                         <a href="mailto:inesmaio4@gmail.com"><img src="/icons/email.svg" /></a>
                         <a href="https://github.com/inesmaio/" target="_blank"><img src="/icons/github.svg" /></a>
                         <a href="https://www.linkedin.com/in/inesmaio/" target="_blank"><img src="/icons/linkedin.svg" /></a>
