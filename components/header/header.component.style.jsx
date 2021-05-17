@@ -38,15 +38,7 @@ export const Icons = styled.div`
     justify-content: center;
     align-items: flex-end;
     flex-wrap: wrap;
-    margin-bottom: 30px;
-    @media (min-width: 768px) {
-        & img {
-            width: 70px;
-           }
-    }
-    @media (min-width: 1024px) {
-        margin: 0;
-    }
+    margin: 30px;
     & a {
         transition: transform .8s;
         &:hover {
@@ -136,6 +128,30 @@ export const HeaderBarContainer = styled.div`
   }
 }
 `;
+
+export const FixHeaderBarContainer = styled.div`
+  box-sizing: border-box;
+  position: fixed;
+  display: flex;
+  z-index: 1;
+  flex-direction: row;
+  padding: 10px;
+  top: -150px;
+  left: 0;
+  background-color: ${(props) => props.theme.colors.green};
+  box-shadow: inset 7px 7px 14px #92b8b6, 
+              inset -7px -7px 14px #c6f8f6;
+  border-bottom: 5px solid ${(props) => props.theme.colors.salmon};
+  width: 100%;
+  height: 90px;
+  justify-content: space-between;
+`
+export const Description = styled.div`
+   width: 40vw;
+   text-align: left;
+   margin-bottom: 0;
+ `
+
 
 export const ButtonsContainer = styled.section`
   display: flex;
