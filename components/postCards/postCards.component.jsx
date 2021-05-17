@@ -35,16 +35,10 @@ class PostCard extends React.Component {
                 <h1>Welcome to my Blog</h1>
                 <CardsContainer>
                     {this.state.posts.map((post) => {
-                        const contentMarkup = () => {
-                            return { __html: post.content }
-                        }
-                        const titleMarkup = () => {
-                            return { __html: post.title }
-                        }
                         return (
                             <Card>
-                                <Title dangerouslySetInnerHTML={titleMarkup()} />
-                                <Description dangerouslySetInnerHTML={contentMarkup()} />
+                                <Title dangerouslySetInnerHTML={{ __html: post.title }} />
+                                <Description dangerouslySetInnerHTML={{ __html: post.content }} />
                                 <Button 
                                     label="Read More"
                                     

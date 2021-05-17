@@ -6,7 +6,16 @@ const Button = ({
     label
 }) => {
     return (
-        <ButtonStyle onClick={handleOnClick}>{label}</ButtonStyle>
+        <ButtonStyle onClick={handleOnClick}>
+            <link
+                href={{
+                    pathname: 'post/[id]',
+                    query: { id: post.id }
+                }}>
+                <a>{label}</a>
+            </link>
+
+        </ButtonStyle>
     )
 }
 

@@ -1,6 +1,5 @@
 import React from "react"
-import { HeaderStyle, HeaderContent, Title, Icons, CVIcon } from "./header.component.style"
-import { HeaderStyle, HeaderContent, Title, Description, Icons } from "./header.component.style"
+import { HeaderStyle, HeaderContent, Title, HeaderDescription, Icons } from "./header.component.style"
 import { HeaderBar } from "./headerBar.component"
 
 class Header extends React.Component {
@@ -13,7 +12,7 @@ class Header extends React.Component {
                 />
                 <HeaderContent>
                     <Title>{this.props.title}</Title>
-                    <Description>{this.props.description}</Description>
+                    <HeaderDescription>{this.props.description}</HeaderDescription>
                     <Icons>
                         <a href={this.props.path}><img src={this.props.img} /></a>
                         <a href="/ines_maio_resume.pdf" target='_blank'><img src="/icons/cv.svg" /></a>

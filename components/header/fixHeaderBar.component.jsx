@@ -1,5 +1,5 @@
 import React from "react";
-import { Icons, LogoContainer, LogoTitle, FixHeaderBarContainer, ButtonsContainer } from "./header.component.style"
+import { FixHeaderBarContainer, Icons, LogoContainer, LogoTitle, ButtonsContainer } from "./header.component.style"
 
 class FixHeaderBar extends React.Component {
   render() {

@@ -81,10 +81,10 @@ const Post = () => {
         try {
             const postsResponse = await fetchPost(id);
             setPost(postsResponse);
-
+          
             if (!postsResponse.ID) return;
             const commentsResponse = await fetchComments(postsResponse.ID);
-            setComments(commentsResponse)
+            setComments(commentsResponse.comments)
         } finally {
             setFetching(false)
         }
@@ -93,7 +93,6 @@ const Post = () => {
     useEffect(() => {
         loadData();
     }, [id]);
-
 
     if (fetching) return <div>Loading...</div>
 

@@ -145,12 +145,13 @@ export const FixHeaderBarContainer = styled.div`
   width: 100%;
   height: 90px;
   justify-content: space-between;
-`
-export const Description = styled.div`
+`;
+
+export const HeaderDescription = styled.div`
    width: 40vw;
    text-align: left;
    margin-bottom: 0;
- `
+ `;
 
 
 export const ButtonsContainer = styled.section`
@@ -164,4 +165,4 @@ export const ButtonsContainer = styled.section`
 export const Description = styled.p`
     width: 40vw;
     text-align: center;
-`
+`;
