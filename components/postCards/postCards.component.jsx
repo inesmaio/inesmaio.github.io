@@ -41,7 +41,6 @@ class PostCard extends React.Component {
                                 <Description dangerouslySetInnerHTML={{ __html: post.content }} />
                                 <Button 
                                     label="Read More"
-                                    
                                 />
                             </Card>
                             

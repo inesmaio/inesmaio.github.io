@@ -1,5 +1,5 @@
 import React from 'react';
-import { Details, PostDetailsContainer, Title, Post, AuthorInfo, Comments } from "./postDetails.component.style";
+import { Details, PostDetailsContainer, Title, Post, AuthorInfo, Comments, CommentContainer, Avatar, CommentContent, Description, CommentDetails } from "./postDetails.component.style";
 import { HeaderBar } from "../header"
 
 
@@ -21,11 +21,13 @@ const PostDetails = ({
                 <Comments>
                     {comments.map((comment) => {
                         return (
-                            <div>
-                                <img src={comment.author.avatar_URL} alt="avatar" />
-                                <div dangerouslySetInnerHTML={{ __html: comment.content }} />
-                                <div>Created by {comment.author.name} on {comment.date.slice(0, 10)}</div>
-                            </div>
+                            <CommentContainer>
+                                <Avatar src={comment.author.avatar_URL} alt="avatar" />
+                                <CommentContent>
+                                    <Description dangerouslySetInnerHTML={{ __html: comment.content }} />
+                                    <CommentDetails>Created by {comment.author.name} on {comment.date.slice(0, 10)} </CommentDetails>
+                                </CommentContent>
+                            </CommentContainer>
                         )
                     })}
 

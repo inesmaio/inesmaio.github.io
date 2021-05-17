@@ -136,7 +136,7 @@ export const FixHeaderBarContainer = styled.div`
   z-index: 1;
   flex-direction: row;
   padding: 10px;
-  top: -150px;
+  top: 0;
   left: 0;
   background-color: ${(props) => props.theme.colors.green};
   box-shadow: inset 7px 7px 14px #92b8b6, 

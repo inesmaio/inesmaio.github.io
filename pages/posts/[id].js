@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { createGlobalStyle } from "styled-components";
 import { fetchPost, fetchComments } from '../../services/wp.api.service';
-import { FixHeaderBar, PostDetails } from '../../components'
+import { FixHeaderBar, PostDetails, Footer } from '../../components'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -107,6 +107,7 @@ const Post = () => {
                 post={post}
                 comments={comments}
             />
+            <Footer />
         </div>
     )
 }
