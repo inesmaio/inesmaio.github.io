@@ -25,8 +25,11 @@ const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.colors.blue};
     font-size: ${(props) => props.theme.fontSizes.pM};
     @media (min-width: 768px){
-      font-size: ${(props) => props.theme.fontSizes.p};
+      font-size: ${(props) => props.theme.fontSizes.pT};
     }
+    @media (min-width: 1024px){
+        font-size: ${(props) => props.theme.fontSizes.p};
+      }
   }
   .buttonContainer{
       display: flex;

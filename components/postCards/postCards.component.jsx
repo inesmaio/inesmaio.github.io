@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Container, CardsContainer, Description, Title } from "./postCards.component.style"
+import { Card, Container, CardsContainer, Description, Title, TitleSec } from "./postCards.component.style"
 import { Button } from '../../components'
 import { fecthPosts } from "../../services/wp.api.service"
 
@@ -29,12 +29,11 @@ class PostCard extends React.Component {
     render() {
         return (
             <Container>
-                <h1>Welcome to my Blog</h1>
                 <CardsContainer>
                     {this.state.posts.map((post) => {
                         return (
                             <Card key={post.title}>
-                                <Title dangerouslySetInnerHTML={{ __html: post.title }} />
+                                <TitleSec dangerouslySetInnerHTML={{ __html: post.title }} />
                                 <Description dangerouslySetInnerHTML={{ __html: post.content }} />
                                 <Button
                                     pathname={`/posts/${post.slug}`}

@@ -35,9 +35,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${(props) => props.theme.fontFamily.title};
     letter-spacing: 5px;
     margin: 30px 0;
-    text-shadow: 5px 5px white;
+    text-shadow: 4px 4px white;
     @media (min-width: 768px){
         font-size: ${(props) => props.theme.fontSizes.h1};
+        text-shadow: 5px 5px white;
     }
   }
 

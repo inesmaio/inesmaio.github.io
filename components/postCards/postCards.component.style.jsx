@@ -11,13 +11,14 @@ export const Container = styled.section`
 export const Card = styled.section`
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
-    width: 400px;
-    height: 600px;
+    width: 250px;
+    height: 500px;
     padding: 20px;
-    margin: 50px;
+    margin: 10px;
+    
     
     background-color: ${(props) => props.theme.colors.lightGreen};
     border: 1px solid ${(props) => props.theme.colors.salmon};
@@ -25,6 +26,12 @@ export const Card = styled.section`
     box-shadow: 2px 2px 10px 0px grey;
     
     flex: 0 0 auto;
+    @media (min-width: 768px) {
+        width: 400px;
+        height: 600px;
+        margin: 50px;
+        justify-content: space-around;
+    }
     
 `
 export const Description = styled.div`
@@ -32,19 +39,30 @@ export const Description = styled.div`
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: flex-start;    
-    font-size: ${(props) => props.theme.fontSizes.pT};
+    font-size: ${(props) => props.theme.fontSizes.pM};
     padding: 20px;
     line-height: 30px;
     text-align: left;
     font-weight: bold;
-    width: 350px;
+    width: auto;
     height: 300px;
     overflow: hidden;
     margin-bottom: 30px;
 `
 
-export const Title = styled.h3`
-    font-size: ${(props) => props.theme.fontSizes.h1T}
+export const TitleSec = styled.h3`
+    font-size: ${(props) => props.theme.fontSizes.h2}
+`
+
+export const Title = styled.h2`
+    display: none;
+    font-size: ${(props) => props.theme.fontSizes.h1M};
+    text-shadow: 4px 4px white;
+    @media (min-width: 768px){
+        display: flex;
+        font-size: ${(props) => props.theme.fontSizes.h1};
+        text-shadow: 5px 5px white;
+    }
 `
 
 export const CardsContainer = styled.ul`
@@ -53,4 +71,5 @@ export const CardsContainer = styled.ul`
     flex-flow: wrap;
     justify-content: center;
     align-items: flex-start;
+    padding: 0;
 `
