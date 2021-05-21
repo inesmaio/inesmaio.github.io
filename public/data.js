@@ -81,11 +81,12 @@ export const education = [
 
 export const portfolio = [
     {
-        title: "FreeWalking Tours - Licor Beirão",
-        date: "2019",
-        institution: "/licorbeirao.png",
-        description: "Final project of Web Development training. I used JavaScript and SASS. This is not a complete APP.",
-        url:"https://freewalkingtours.herokuapp.com/"
+        title: "My Blog",
+        date: "Work in Progress",
+        institution: "/myblog.png",
+        description: "Built with React, NextJS and Styled-Components.",
+        url:"/blog"
+        
     },
     {
         title: "Bzinus",
@@ -102,10 +103,10 @@ export const portfolio = [
         url:"https://search-countries.vercel.app/"
     },
     {
-        title: "My Blog",
-        date: "Work in Progress",
-        institution: "/myblog.png",
-        description: "Built with React, NextJS and Styled-Components.",
-        url:"https://inesmaio.github.io/wip"
+        title: "FreeWalking Tours - Licor Beirão",
+        date: "2019",
+        institution: "/licorbeirao.png",
+        description: "Final project of Web Development training. I used JavaScript and SASS. This is not a complete APP.",
+        url:"https://freewalkingtours.herokuapp.com/"
     },
 ]

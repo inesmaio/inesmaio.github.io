@@ -1,12 +1,9 @@
 import React, { useEffect } from "react";
-import { AboutMeSec, Header, Banner, Cards, Footer, PortfolioCards } from "../components";
-import { experience, education, portfolio } from "../public/data";
 import { createGlobalStyle } from "styled-components";
+import { Header, PostCard, Footer } from "../components"
 import styled from "styled-components";
 
-
 const GlobalStyle = createGlobalStyle`
-
   @font-face {
     font-family: "AmaticSC";
     src: url("../font/AmaticSC-Bold.ttf");
@@ -70,64 +67,55 @@ const GlobalStyle = createGlobalStyle`
   } 
 `;
 
-const AppContainer = styled.div`
+const BlogContainer = styled.div`
   box-sizing: border-box;
   height: 100vh;
   width: 100vw;
 `;
 
-const Index = () => {
+const Blog = () => {
+    const scroll = () => {
+        const element = document.getElementById("menuBar");
+        if (element && (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)) {
+            element.style.top = "0";
+            element.classList.remove("hide")
+            element.classList.add("drop")
+        } else if (element) {
+            element.style.top = "-150px";
+            element.classList.remove("drop")
+            element.classList.add("hide")
 
-  const scroll = () => {
-    const element = document.getElementById("menuBar");
-    if (element && (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)) {
-      element.style.top = "0";
-      element.classList.remove("hide")
-      element.classList.add("drop")
-    } else if (element) {
-      element.style.top = "-150px";
-      element.classList.remove("drop")
-      element.classList.add("hide")
-
+        }
     }
-  }
 
-  useEffect(() => {
-    addEventListener("scroll", scroll);
+    useEffect(() => {
+        addEventListener("scroll", scroll);
 
-    return () => {
-      removeEventListener("scroll", scroll);
-    }
-  }, [])
+        return () => {
+            removeEventListener("scroll", scroll);
+        }
+    }, [])
+    return (
+        <BlogContainer>
+            <GlobalStyle />
+            <Header
+                title="Inês Maio's Blog"
+                description={<div><p>Welcome to my blog<br /><br />
+                    This blog is part of my adventure through the Frontend world. Here I share my challengers and battles that it takes to become a Frontend Developer.
+                    <br /><br /> Enjoy it :)</p></div>}
+                path="/"
+                img="/icons/home.png"
+            />
+            <PostCard />
+            <Footer
+                path="/"
+                img="/icons/home.png"
+            />
+        </BlogContainer>
+    )
+}
 
-  return (
-    <AppContainer>
-      <GlobalStyle />
-      <Header
-        title="Inês Maio"
-        path="/blog"
-        img="/icons/blog.png"
-      />
-      <Banner img_src="/aboutme-banner-low.jpg" title="About Me" />
-      <AboutMeSec />
-      <Banner img_src="/exp-low.jpg" title="Portfolio" />
-      <section>
-        <PortfolioCards data={portfolio} />
-      </section>
-      <Banner img_src="/education-banner-low.jpg" title="Education" />
-      <section>
-        <Cards data={education} />
-      </section>
-      <Banner img_src="/exp-low.jpg" title="Experience" />
-      <section>
-        <Cards data={experience} />
-      </section>
-      <Footer
-        path="/blog"
-        img="/icons/blog.png"
-      />
-    </AppContainer>
-  )
-};
 
-export default Index;
+
+
+export default Blog

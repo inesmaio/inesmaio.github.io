@@ -38,15 +38,7 @@ export const Icons = styled.div`
     justify-content: center;
     align-items: flex-end;
     flex-wrap: wrap;
-    margin-bottom: 30px;
-    @media (min-width: 768px) {
-        & img {
-            width: 70px;
-           }
-    }
-    @media (min-width: 1024px) {
-        margin: 0;
-    }
+    margin: 30px;
     & a {
         transition: transform .8s;
         &:hover {
@@ -93,12 +85,13 @@ export const HeaderLogo = styled.img`
   with: 100%;
 `;
 
-export const LogoTitle = styled.h4`
+export const LogoTitle = styled.a`
   color: ${(props) => props.theme.colors.oldWhite};
   font-family: ${(props) => props.theme.fontFamily.title};
   letter-spacing: 4px;
   text-transform: uppercase;
   font-size: ${(props) => props.theme.fontSizes.h2};
+  cursor: pointer;
 `;
 
 export const HeaderBarContainer = styled.div`
@@ -137,6 +130,31 @@ export const HeaderBarContainer = styled.div`
 }
 `;
 
+export const FixHeaderBarContainer = styled.div`
+  box-sizing: border-box;
+  position: fixed;
+  display: flex;
+  z-index: 1;
+  flex-direction: row;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  background-color: ${(props) => props.theme.colors.green};
+  box-shadow: inset 7px 7px 14px #92b8b6, 
+              inset -7px -7px 14px #c6f8f6;
+  border-bottom: 5px solid ${(props) => props.theme.colors.salmon};
+  width: 100%;
+  height: 90px;
+  justify-content: space-between;
+`;
+
+export const HeaderDescription = styled.div`
+   width: 40vw;
+   text-align: left;
+   margin-bottom: 0;
+ `;
+
+
 export const ButtonsContainer = styled.section`
   display: flex;
   margin-right: 20px;
@@ -148,4 +166,4 @@ export const ButtonsContainer = styled.section`
 export const Description = styled.p`
     width: 40vw;
     text-align: center;
-`
+`;
