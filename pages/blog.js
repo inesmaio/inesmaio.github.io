@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { createGlobalStyle } from "styled-components";
-import { Header, PostCard } from "../components"
+import { Header, PostCard, Footer } from "../components"
 import styled from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -100,13 +100,17 @@ const Blog = () => {
             <GlobalStyle />
             <Header
                 title="Inês Maio's Blog"
-                description={<div><p>Hi there, <br /><br />My name is Inês Maio, was born on the 80's, survived my teen years with Pearl Jam, Nirvana, Jeff Buckley by my side on 90's.</p>
-                    <p>Got my first job and graduate from Information Technologies on 00's. </p><p>Met my other half and got to be a mom of four cats, two dogs and one little girl. On the 10's</p>
-                    <p>On the 20's I'm sharing one of the most challenging projects of my life: <i>Becoming a Frontend Developer</i>.<br /> My main topics will be about JavaScript and React. Enjoy it :)</p></div>}
+                description={<div><p>Welcome to my blog<br /><br />
+                    This blog is part of my adventure through the Frontend world. Here I share my challengers and battles that it takes to become a Frontend Developer.
+                    <br /><br /> Enjoy it :)</p></div>}
                 path="/"
                 img="/icons/home.png"
             />
             <PostCard />
+            <Footer
+                path="/"
+                img="/icons/home.png"
+            />
         </BlogContainer>
     )
 }

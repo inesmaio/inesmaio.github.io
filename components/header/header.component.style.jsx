@@ -85,12 +85,13 @@ export const HeaderLogo = styled.img`
   with: 100%;
 `;
 
-export const LogoTitle = styled.h4`
+export const LogoTitle = styled.a`
   color: ${(props) => props.theme.colors.oldWhite};
   font-family: ${(props) => props.theme.fontFamily.title};
   letter-spacing: 4px;
   text-transform: uppercase;
   font-size: ${(props) => props.theme.fontSizes.h2};
+  cursor: pointer;
 `;
 
 export const HeaderBarContainer = styled.div`

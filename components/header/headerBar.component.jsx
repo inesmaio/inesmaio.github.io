@@ -1,12 +1,13 @@
 import React from "react";
-import { Icons, LogoContainer, HeaderLogo, LogoTitle, HeaderBarContainer, ButtonsContainer } from "./header.component.style"
+import Link from 'next/link';
+import { Icons, LogoContainer, LogoTitle, HeaderBarContainer, ButtonsContainer } from "./header.component.style"
 
 class HeaderBar extends React.Component {
   render() {
     return (
       <HeaderBarContainer id="menuBar">
         <LogoContainer>
-          <LogoTitle>Inês Maio</LogoTitle>
+        <Link href="/"><LogoTitle>Inês Maio</LogoTitle></Link>
         </LogoContainer>
         <ButtonsContainer>
           <Icons>

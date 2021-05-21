@@ -18,9 +18,9 @@ const PostDetails = ({
                 <Title dangerouslySetInnerHTML={{ __html: post.title }} />
                 <Post dangerouslySetInnerHTML={{ __html: post.content }} />
                 <AuthorInfo>Created by {post.author && post.author.name} on {post.date && post.date.slice(0, 10)}</AuthorInfo>
-                <Comments>
-                    {comments.map((comment) => {
-                        return (
+                {comments ? comments.map((comment) => {
+                    return (
+                        <Comments key={post.title}>
                             <CommentContainer>
                                 <Avatar src={comment.author.avatar_URL} alt="avatar" />
                                 <CommentContent>
@@ -28,10 +28,9 @@ const PostDetails = ({
                                     <CommentDetails>Created by {comment.author.name} on {comment.date.slice(0, 10)} </CommentDetails>
                                 </CommentContent>
                             </CommentContainer>
-                        )
-                    })}
-
-                </Comments>
+                        </Comments>
+                    )
+                }) : null}
             </PostDetailsContainer>
         </Details>
     )

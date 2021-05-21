@@ -100,31 +100,34 @@ const Index = () => {
     }
   }, [])
 
-    return (
-        <AppContainer>
-          <GlobalStyle />
-            <Header 
-              title= "Inês Maio" 
-              path="https://inesmaio.github.io/wip"
-              img="/icons/blog.png"
-            />
-            <Banner img_src="/aboutme-banner-low.jpg" title="About Me" />
-            <AboutMeSec />
-            <Banner img_src="/exp-low.jpg" title="Portfolio" />
-            <section>
-                <PortfolioCards data={portfolio} />
-            </section>
-            <Banner img_src="/education-banner-low.jpg" title="Education" />
-            <section>
-                <Cards data={education} />
-            </section>
-            <Banner img_src="/exp-low.jpg" title="Experience" />
-            <section>
-                <Cards data={experience} />
-            </section>
-            <Footer />
-        </AppContainer>
-    )
+  return (
+    <AppContainer>
+      <GlobalStyle />
+      <Header
+        title="Inês Maio"
+        path="/blog"
+        img="/icons/blog.png"
+      />
+      <Banner img_src="/aboutme-banner-low.jpg" title="About Me" />
+      <AboutMeSec />
+      <Banner img_src="/exp-low.jpg" title="Portfolio" />
+      <section>
+        <PortfolioCards data={portfolio} />
+      </section>
+      <Banner img_src="/education-banner-low.jpg" title="Education" />
+      <section>
+        <Cards data={education} />
+      </section>
+      <Banner img_src="/exp-low.jpg" title="Experience" />
+      <section>
+        <Cards data={experience} />
+      </section>
+      <Footer
+        path="/blog"
+        img="/icons/blog.png"
+      />
+    </AppContainer>
+  )
 };
 
 export default Index;

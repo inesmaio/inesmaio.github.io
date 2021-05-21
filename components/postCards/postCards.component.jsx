@@ -10,15 +10,12 @@ class PostCard extends React.Component {
         this.state = {
             posts: []
         }
-        this.handleOnClick = this.handleOnClick.bind(this);
     }
 
     componentWillMount() {
         this.loadData();
     }
-    handleOnClick(){
-        return null
-    }
+
     async loadData() {
         try {
             console.log("I'm HERE")
@@ -36,14 +33,14 @@ class PostCard extends React.Component {
                 <CardsContainer>
                     {this.state.posts.map((post) => {
                         return (
-                            <Card>
+                            <Card key={post.title}>
                                 <Title dangerouslySetInnerHTML={{ __html: post.title }} />
                                 <Description dangerouslySetInnerHTML={{ __html: post.content }} />
-                                <Button 
+                                <Button
+                                    pathname={`/posts/${post.slug}`}
                                     label="Read More"
                                 />
                             </Card>
-                            
                         )
                     })}
                 </CardsContainer>

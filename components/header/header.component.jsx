@@ -7,7 +7,7 @@ class Header extends React.Component {
         return (
             <HeaderStyle>
                 <HeaderBar
-                    path="mailto:inesmaio4@gmail.com"
+                    path="/"
                     img="/icons/home.png"
                 />
                 <HeaderContent>

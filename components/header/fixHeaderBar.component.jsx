@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link';
 import { FixHeaderBarContainer, Icons, LogoContainer, LogoTitle, ButtonsContainer } from "./header.component.style"
 
 class FixHeaderBar extends React.Component {
@@ -6,7 +7,7 @@ class FixHeaderBar extends React.Component {
     return (
       <FixHeaderBarContainer id="menuBar">
         <LogoContainer>
-          <LogoTitle>Inês Maio</LogoTitle>
+          <Link href="/blog"><LogoTitle>Inês Maio</LogoTitle></Link>
         </LogoContainer>
         <ButtonsContainer>
           <Icons>
