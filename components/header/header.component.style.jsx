@@ -32,9 +32,8 @@ export const HeaderContent = styled.div`
 
     }
 `;
-
 export const Icons = styled.div`
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: flex-end;
     flex-wrap: wrap;
@@ -49,8 +48,33 @@ export const Icons = styled.div`
         border-radius: 10%;
         padding: 0;
         margin: 8px;
-        width: 30px;
+        width: 39px;
         @media (min-width: 768px) {
+          display: flex;
+            width: 50px;
+            margin: 15;
+        }
+      }
+`;
+
+export const IconsBar = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    & a {
+        transition: transform .8s;
+        &:hover {
+          transform: scale(1.2);
+        }
+    & img {
+        box-shadow: 1px 1px 2px ${(props) => props.theme.colors.blue};
+        border-radius: 10%;
+        padding: 0;
+        margin: 5px;
+        width: 39px;
+        @media (min-width: 768px) {
+            margin: 8px;
             width: 50px;
             margin: 15;
         }
@@ -64,20 +88,25 @@ export const Title = styled.h1`
     color: ${(props) => props.theme.colors.red};
     letter-spacing: 5px;
     margin: 30px 0;
-    text-shadow: 5px 5px white;
+    text-shadow: 4px 4px white;
         @media (min-width: 1024px) {
             font-size: ${(props) => props.theme.fontSizes.h1};
             align-content: center;
+            text-shadow: 5px 5px white;
         }
 
 `;
 
 export const LogoContainer = styled.section`
-  margin-left: 20px;
+  margin-left: 0;
+  width: 50%;
   width: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-star;
+  @media (min-width: 768px) {
+    margin-left: 20px;
+}
 `;
 
 export const HeaderLogo = styled.img`
@@ -86,12 +115,16 @@ export const HeaderLogo = styled.img`
 `;
 
 export const LogoTitle = styled.a`
+  display: none;
   color: ${(props) => props.theme.colors.oldWhite};
   font-family: ${(props) => props.theme.fontFamily.title};
   letter-spacing: 4px;
   text-transform: uppercase;
   font-size: ${(props) => props.theme.fontSizes.h2};
   cursor: pointer;
+  @media (min-width: 768px) {
+    display: flex;
+}
 `;
 
 export const HeaderBarContainer = styled.div`
@@ -109,7 +142,7 @@ export const HeaderBarContainer = styled.div`
   border-bottom: 5px solid ${(props) => props.theme.colors.salmon};
   width: 100%;
   height: 90px;
-  justify-content: space-between;
+  justify-content: center;
 
   &.drop {
   animation-name: drop;
@@ -127,6 +160,9 @@ export const HeaderBarContainer = styled.div`
     from {top: 0px}
     to {top: -150px}
   }
+  @media (min-width: 768px) {
+    justify-content: space-between;
+    
 }
 `;
 
@@ -145,21 +181,33 @@ export const FixHeaderBarContainer = styled.div`
   border-bottom: 5px solid ${(props) => props.theme.colors.salmon};
   width: 100%;
   height: 90px;
-  justify-content: space-between;
+  justify-content: center;
+  @media (min-width: 768px) {
+    justify-content: space-between;
+    
+}
 `;
 
 export const HeaderDescription = styled.div`
-   width: 40vw;
+   padding: 20px;
    text-align: left;
    margin-bottom: 0;
+   width: 80vw;
+   @media (min-width: 1024px) {
+    width: 40vw;
+}
  `;
 
 
 export const ButtonsContainer = styled.section`
   display: flex;
-  margin-right: 20px;
+  margin-right: 0;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+    margin-right: 20px;
+    width: 70%;
 }
 `;
 

@@ -13,7 +13,7 @@ const theme = {
     },
     fontSizes: {
         h1: "150px",
-        h1M: "80px",
+        h1M: "55px",
         h1T: "40px",
         h2: "30px",
         h2M: "20px",

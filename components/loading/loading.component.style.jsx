@@ -19,7 +19,11 @@ export const Title = styled.h1`
   font-family: ${(props) => props.theme.fontFamily.title};
   letter-spacing: 4px;
   text-transform: uppercase;
-  font-size: ${(props) => props.theme.fontSizes.h1};
+  font-size: ${(props) => props.theme.fontSizes.h1M};
+  @media (min-width: 768px){
+    font-size: ${(props) => props.theme.fontSizes.h1};
+
+}
 `
 
 export const Gif = styled.img`
