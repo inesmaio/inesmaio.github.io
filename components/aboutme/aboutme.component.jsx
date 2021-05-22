@@ -1,4 +1,5 @@
 import { AboutMe, PetsIcons, ContentCenter, Description } from "./aboutme.component.style"
+import Link from 'next/link'
 
 const AboutMeSec = () => {
     return (
@@ -8,7 +9,8 @@ const AboutMeSec = () => {
                 I live in Porto with my lovely and huge family. <br />
                 I'm a Frontend Developer with knowledge of JavaScript, React, CSS, SASS, Styled-Components, to be able to create amazing things. <br />
                 I try to keep a positive mindset and eager to learn and develop my skills further.<br />
-                Scroll down to find out more. <br />
+                Scroll down to find out more and check <Link href='/blog'><a>my blog</a></Link>. <br />
+                Hope you like it :)
             </Description>
             <PetsIcons>
                 <ContentCenter>
