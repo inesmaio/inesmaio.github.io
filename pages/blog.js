@@ -102,7 +102,7 @@ const Blog = () => {
             <Header
                 title="Inês Maio's Blog"
                 description={<div><p>Welcome to my blog<br /><br />
-                    This blog is part of my adventure through the Frontend world. Here I share my challengers and battles that it takes to become a Frontend Developer.
+                    This blog is part of my adventure through the Frontend world. Here I share my challenges and battles that it takes to become a Frontend Developer.
                     <br /><br /> Enjoy it :)</p></div>}
                 path="/"
                 img="/icons/home.png"
