@@ -5,12 +5,11 @@ const AboutMeSec = () => {
     return (
         <AboutMe>
             <Description>
-                Hi, I'm Inês <br />
-                I live in Porto with my lovely and huge family. <br />
-                I'm a Frontend Developer with knowledge of JavaScript, React, CSS, SASS, Styled-Components, to be able to create amazing things. <br />
-                I try to keep a positive mindset and eager to learn and develop my skills further.<br />
-                Scroll down to find out more and check <Link href='/blog'><a>my blog</a></Link>. <br />
-                Hope you like it :)
+                 Hi!<br />
+                I’m Inês Maio, a tech enthusiast with a degree in Information Science and 12 years of experience in IT, from frontend development to QA and project coordination.<br />
+                I believe technology starts with people, their creativity, their curuosity, and now their collaboration with AI to create smart, human-centred solutions.<br/>
+                <br />
+                Outside of tech, I’m a proud mum, a nature lover, and I share my home with a few furry friends and a lot of Lego bricks. I live by the sea in São Félix da Marinha, where the ocean breeze keeps my ideas flowing and curiosity growing.
             </Description>
             <PetsIcons>
                 <ContentCenter>
